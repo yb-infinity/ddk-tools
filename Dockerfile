@@ -48,6 +48,5 @@ RUN set -e && apk --update add --no-cache tini wget \
 
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 VOLUME /tmp
-WORKDIR /tmp
 
 ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
