@@ -19,7 +19,7 @@ LABEL org.opencontainers.image.authors="DrakeMazzy <i.am@mazzy.rv.ua>" \
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
 USER root
-RUN set -e && apk --update add --no-cache tini wget \
+RUN set -e && apk --update add --no-cache wget \
     php${PHP_VER} \
     php${PHP_VER}-phar \
     php${PHP_VER}-mbstring \
@@ -46,7 +46,7 @@ RUN set -e && apk --update add --no-cache tini wget \
     composer clear-cache && \
     find /root/.composer -type d -name ".git" -o -name ".github" -o -name "tests" | xargs rm -rf
 
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 VOLUME /tmp
 
-ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
