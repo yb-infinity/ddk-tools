@@ -46,7 +46,8 @@ RUN set -e && apk --update add --no-cache tini wget \
     composer clear-cache && \
     find /root/.composer -type d -name ".git" -o -name ".github" -o -name "tests" | xargs rm -rf
 
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 VOLUME /tmp
 WORKDIR /tmp
 
-ENTRYPOINT ["/sbin/tini", "--"]
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
