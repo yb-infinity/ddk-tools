@@ -10,8 +10,8 @@
 
 This project provides a Docker image that includes:
 - [PHP](https://www.php.net/) (distributed under the [PHP License](https://www.php.net/license/))
-- [Composer 2.8.6](https://getcomposer.org/) (licensed under [MIT](https://github.com/composer/composer/blob/main/LICENSE))
-- [composer-normalize 2.45.0](https://github.com/ergebnis/composer-normalize) (MIT)
+- [Composer 2.8.8](https://getcomposer.org/) (licensed under [MIT](https://github.com/composer/composer/blob/main/LICENSE))
+- [composer-normalize 2.47.0](https://github.com/ergebnis/composer-normalize) (MIT)
 - [PHP-Parallel-Lint 1.4.0](https://github.com/php-parallel-lint/PHP-Parallel-Lint) (BSD-2-Clause)
 
 ## Usage
