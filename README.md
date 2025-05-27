@@ -8,9 +8,9 @@
 [![Docker Stars](https://img.shields.io/docker/stars/drakemazzy/ddk-tools.svg)](https://hub.docker.com/r/drakemazzy/ddk-tools)
 [![License: GPL-2.0-or-later](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html)
 
-This project provides a Docker image that includes:
+This project provides a Docker image that includes(latest):
 - [PHP](https://www.php.net/) (distributed under the [PHP License](https://www.php.net/license/))
-- [Composer 2.8.8](https://getcomposer.org/) (licensed under [MIT](https://github.com/composer/composer/blob/main/LICENSE))
+- [Composer 2.8.9](https://getcomposer.org/) (licensed under [MIT](https://github.com/composer/composer/blob/main/LICENSE))
 - [composer-normalize 2.47.0](https://github.com/ergebnis/composer-normalize) (MIT)
 - [PHP-Parallel-Lint 1.4.0](https://github.com/php-parallel-lint/PHP-Parallel-Lint) (BSD-2-Clause)
 
@@ -63,8 +63,8 @@ The image supports the following build arguments:
 | Argument      | Description           | Default     |
 | ------------- | --------------------- | ----------- |
 | PHP_VER       | PHP version           | 8.1-4       |
-| COMPOSER_VER  | Composer version      | 2.8.6       |
-| NORMALIZE_VER | Normalize version     | 2.45.0      |
+| COMPOSER_VER  | Composer version      | 2.8.9       |
+| NORMALIZE_VER | Normalize version     | 2.47.0      |
 | PARALLEL_VER  | Parallel-Lint version | 1.4.0       |
 | BUILD_VER     | Build version         | git SHA     |
 | BUILD_DATE    | Build date            | Current UTC |
