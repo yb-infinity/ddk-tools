@@ -4,7 +4,7 @@
 
 [![Docker Image CI](https://github.com/yb-infinity/ddk-tools/actions/workflows/docker.yml/badge.svg)](https://github.com/yb-infinity/ddk-tools/actions/workflows/docker.yml)
 [![Docker Pulls](https://img.shields.io/docker/pulls/drakemazzy/ddk-tools.svg)](https://hub.docker.com/r/drakemazzy/ddk-tools)
-[![Docker Image Size](https://img.shields.io/docker/image-size/drakemazzy/ddk-tools/latest)](https://hub.docker.com/r/drakemazzy/ddk-tools)
+[![Docker Image Size](https://img.shields.io/docker/image-size/drakemazzy/ddk-tools)](https://hub.docker.com/r/drakemazzy/ddk-tools)
 [![Docker Stars](https://img.shields.io/docker/stars/drakemazzy/ddk-tools.svg)](https://hub.docker.com/r/drakemazzy/ddk-tools)
 [![License: GPL-2.0-or-later](https://img.shields.io/badge/License-GPL%20v2+-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html)
 
