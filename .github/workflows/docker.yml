@@ -30,35 +30,35 @@ jobs:
           - platform: linux/amd64
             arch: X64
             php: 84
-            alpine: 3.21.3
+            alpine: 3.22.1
           - platform: linux/amd64
             arch: X64
             php: 83
-            alpine: 3.21.3
+            alpine: 3.22.1
           - platform: linux/amd64
             arch: X64
             php: 82
-            alpine: 3.21.3
+            alpine: 3.22.1
           - platform: linux/amd64
             arch: X64
             php: 81
-            alpine: 3.19.7
+            alpine: 3.19.8
           - platform: linux/arm64
             arch: ARM64
             php: 84
-            alpine: 3.21.3
+            alpine: 3.22.1
           - platform: linux/arm64
             arch: ARM64
             php: 83
-            alpine: 3.21.3
+            alpine: 3.22.1
           - platform: linux/arm64
             arch: ARM64
             php: 82
-            alpine: 3.21.3
+            alpine: 3.22.1
           - platform: linux/arm64
             arch: ARM64
             php: 81
-            alpine: 3.19.7
+            alpine: 3.19.8
       fail-fast: false
     runs-on:
       - self-hosted

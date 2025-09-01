@@ -1,12 +1,12 @@
 # syntax=docker/dockerfile:1.4
-ARG ALPINE_VER=3.21.3
+ARG ALPINE_VER=3.22.1
 FROM alpine:${ALPINE_VER}
 
 ARG BUILD_VER
 ARG BUILD_DATE
 ARG PHP_VER=84
-ARG COMPOSER_VER=2.8.9
-ARG NORMALIZE_VER=2.47.0
+ARG COMPOSER_VER=2.8.11
+ARG NORMALIZE_VER=2.48.1
 ARG PARALLEL_VER=1.4.0
 
 LABEL org.opencontainers.image.authors="DrakeMazzy <i.am@mazzy.rv.ua>" \
@@ -24,6 +24,7 @@ RUN set -e && apk --update add --no-cache wget \
     php${PHP_VER}-phar \
     php${PHP_VER}-mbstring \
     php${PHP_VER}-openssl \
+    php${PHP_VER}-iconv \
     # fix for arm64
     && rm -f /usr/bin/php /usr/bin/php-config /usr/bin/phpize && \
     if [ ! -e /usr/bin/php ]; then ln -s /usr/bin/php${PHP_VER} /usr/bin/php; fi && \
