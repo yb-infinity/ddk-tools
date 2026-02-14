@@ -2,10 +2,10 @@ name: Build and Publish Docker Image
 
 on:
   push:
-    branches: ["main"]
-    tags: ["v*"]
+    branches: ['main']
+    tags: ['v*']
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 env:
   REGISTRY: docker.io
@@ -27,38 +27,51 @@ jobs:
     strategy:
       matrix:
         include:
+          # PHP 8.5
+          - platform: linux/amd64
+            arch: X64
+            php: 85
+            alpine: 3.23.3
+          - platform: linux/arm64
+            arch: ARM64
+            php: 85
+            alpine: 3.23.3
+          # PHP 8.4
           - platform: linux/amd64
             arch: X64
             php: 84
-            alpine: 3.22.1
-          - platform: linux/amd64
-            arch: X64
-            php: 83
-            alpine: 3.22.1
-          - platform: linux/amd64
-            arch: X64
-            php: 82
-            alpine: 3.22.1
-          - platform: linux/amd64
-            arch: X64
-            php: 81
-            alpine: 3.19.8
+            alpine: 3.23.3
           - platform: linux/arm64
             arch: ARM64
             php: 84
-            alpine: 3.22.1
+            alpine: 3.23.3
+          # PHP 8.3
+          - platform: linux/amd64
+            arch: X64
+            php: 83
+            alpine: 3.23.3
           - platform: linux/arm64
             arch: ARM64
             php: 83
-            alpine: 3.22.1
+            alpine: 3.23.3
+          # PHP 8.2
+          - platform: linux/amd64
+            arch: X64
+            php: 82
+            alpine: 3.22.3
           - platform: linux/arm64
             arch: ARM64
             php: 82
-            alpine: 3.22.1
+            alpine: 3.22.3
+          # PHP 8.1
+          - platform: linux/amd64
+            arch: X64
+            php: 81
+            alpine: 3.19.9
           - platform: linux/arm64
             arch: ARM64
             php: 81
-            alpine: 3.19.8
+            alpine: 3.19.9
       fail-fast: false
     runs-on:
       - self-hosted
@@ -98,7 +111,7 @@ jobs:
     runs-on: [self-hosted, Linux, X64, dmz]
     strategy:
       matrix:
-        php: [81, 82, 83, 84]
+        php: [81, 82, 83, 84, 85]
     steps:
       - name: Docker Login
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ vars.DOCKERHUB_USERNAME }}" --password-stdin
@@ -131,7 +144,7 @@ jobs:
     runs-on: [self-hosted, Linux, X64, dmz]
     strategy:
       matrix:
-        php: [81, 82, 83, 84]
+        php: [81, 82, 83, 84, 85]
     steps:
       - name: Docker Login
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ vars.DOCKERHUB_USERNAME }}" --password-stdin
